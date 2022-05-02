@@ -9,7 +9,7 @@
     const mei = 'https://raw.githubusercontent.com/music-encoding/sample-encodings/main/MEI_4.0/Music/Encoding_alternatives/Mozart_Veilchen/Das_Veilchen_layout.mei';
     const humdrum = 'https://raw.githubusercontent.com/WolfgangDrescher/lassus-geistliche-psalmen/master/kern/01-beatus-vir.krn';
     console.log(verovio, Module);
-    Module.onRuntimeInitialized = function () {
+    // Module.onRuntimeInitialized = function () {
         console.log('onRuntimeInitialized');
         fetch(mei).then(response => {
             return response.text();
@@ -19,5 +19,5 @@
             const svg = verovioToolkit.renderToSVG(1, {});
             document.getElementById('score').innerHTML = svg;
         });
-    }
+    // }
 </script>
